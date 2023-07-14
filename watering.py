@@ -18,7 +18,7 @@ pinPump = 4                               # GPIO pin of pump
 needsWater = 630                          # sensor value for dry air
 
 # general GPIO settings
-GPIO.setwarnings(False)                   # ignore warnings (unrelevant here)
+GPIO.setwarnings(False)                   # ignore warnings (irrelevant here)
 GPIO.setmode(GPIO.BCM)                    # refer to GPIO pin numbers
 GPIO.setup(pinPump, GPIO.OUT)             # Pi can send voltage to pump
 GPIO.output(pinPump, GPIO.LOW)            # turn pump off
@@ -27,7 +27,7 @@ GPIO.output(pinPump, GPIO.LOW)            # turn pump off
 moisture = readData(0)
 
 # write time and current moisture in statistic file
-f = open("/home/pi/WateringStats.txt", "a")
+f = open("/home/pi/Projects/PlantWatering/WateringStats.txt", "a")
 currentTime = datetime.datetime.now()
 f.write(str(currentTime) + ":\n")
 
