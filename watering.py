@@ -39,8 +39,7 @@ f.write(str(currentTime) + ":\n")
 # 450 = 780 - 330, moisture in %
 # f.write("Current moisture: " + str(round((moisture-330) / 450 * 100, 2)) + "% (" + str(moisture) + ")\n")
 moisturePercent = (1 - ((moisture - waterValue) / moistureRange)) * 100
-f.write("Current moisture: " + str(round(moisturePercent) +
-"% (" + str(moisture) + ")\n")
+f.write("Current moisture: " + str(round(moisturePercent, 2)) + "% (" + str(moisture) + ")\n")
 
 # FOLLOWING NEEDS UPDATE
 # if plants are to dry, start pumping and record the moisture in file
